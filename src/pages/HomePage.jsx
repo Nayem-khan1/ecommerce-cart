@@ -33,7 +33,7 @@ const HomePage = () => {
 
   return (
     <div className="px-4">
-      <Suspense fallback={<div className="text-center text-lg">Loading...</div>}>
+      <Suspense fallback={<Loader/>}>
         <motion.div 
           initial={{ opacity: 0, y: 20 }} 
           animate={{ opacity: 1, y: 0 }} 
