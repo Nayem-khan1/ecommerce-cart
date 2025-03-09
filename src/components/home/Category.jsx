@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router";
 import baby from "../../assets/img/Category/Baby.png";
 import home from "../../assets/img/Category/sofa.png";
 import drink from "../../assets/img/Category/drink.png";
@@ -9,7 +11,6 @@ import personalCare from "../../assets/img/Category/personalCare.png";
 import table from "../../assets/img/Category/table.png";
 import beauty from "../../assets/img/Category/Beauty.png";
 import toy from "../../assets/img/Category/toy.png";
-import { Link } from "react-router";
 
 const categories = [
   { id: 1, name: "Grocery", img: drink, bg: "#C9E9FE4D" },
@@ -31,22 +32,32 @@ function Category() {
         <h1 className="text-xl font-bold mb-4">Get it all right here</h1>
         <Link to="/all-products" className="text-[#26a6fb] px-4 font-semibold">View All</Link>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      <motion.div 
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
         {categories.map((category) => (
-          <div
+          <motion.div
             key={category.id}
             style={{ backgroundColor: category.bg }}
-            className="flex justify-between p-4 rounded-lg shadow-md "
+            className="flex justify-between p-4 rounded-lg shadow-md cursor-pointer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             <p className="font-bold mb-2">{category.name}</p>
-            <img
+            <motion.img
               className="w-20 h-16 object-contain"
               src={category.img}
               alt={category.name}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
             />
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }
