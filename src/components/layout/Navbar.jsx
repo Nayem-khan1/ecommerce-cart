@@ -43,14 +43,7 @@ function Navbar() {
   const { cartItems, totalQuantity, totalPrice } = useSelector(
     (state) => state.cart
   );
-  console.log(
-    "cart items",
-    cartItems,
-    "cart quantity",
-    totalQuantity,
-    "total price",
-    totalPrice
-  );
+
   return (
     <Disclosure as="header" className="bg-white shadow">
       <div className="mx-auto w-11/12 px-2 sm:px-4 lg:divide-y lg:divide-gray-200 lg:px-8">

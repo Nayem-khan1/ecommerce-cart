@@ -26,19 +26,21 @@ This is a **React-based E-Commerce Cart Management System** that allows users to
 │   │   ├── FeaturedProduct.jsx
 │   ├── product/            # Product-related components
 │   │   ├── ProductCard.jsx
-│
 ├── features/               # Redux features (state slices)
 │   ├── cart/               # Cart feature
 │   │   ├── cartSlice.js
 ├── layouts/                # Layout wrappers
 │   ├── MainLayout.jsx
-│
+├── providers/                # provider wrappers
+│   ├── ToastProvider.jsx
+├── routes/                # route wrappers
+│   ├── AppRoutes.jsx
 ├── pages/                  # Page components
 │   ├── HomePage.jsx
 │   ├── CheckoutPage.jsx
 │   ├── AllProducts.jsx
 │   ├── NotFound.jsx
-│
+|
 ├── services/               # API calls
 │   ├── productService.js
 │

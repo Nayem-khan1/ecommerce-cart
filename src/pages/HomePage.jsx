@@ -2,6 +2,7 @@ import { useEffect, useState, lazy, Suspense } from "react";
 import { fetchProducts } from "../services/productService";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
+import Loader from "../components/common/Loader";
 
 // Lazy load components for better performance
 const ProductCard = lazy(() => import("../components/product/ProductCard"));
@@ -83,7 +84,7 @@ const HomePage = () => {
       </motion.div>
 
       {loading ? (
-        <div className="text-center text-lg">Loading products...</div>
+        <Loader/>
       ) : error ? (
         <div className="text-center text-red-500">{error}</div>
       ) : (

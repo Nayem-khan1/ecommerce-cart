@@ -27,9 +27,9 @@ const categories = [
 
 function Category() {
   return (
-    <div className="py-4">
+    <div className="py-8">
       <div className="flex justify-between items-center">
-        <h1 className="text-xl font-bold mb-4">Get it all right here</h1>
+        <h1 className="text-xl font-bold mb-8">Get it all right here</h1>
         <Link to="/all-products" className="text-[#26a6fb] px-4 font-semibold">View All</Link>
       </div>
       <motion.div 
