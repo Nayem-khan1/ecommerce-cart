@@ -60,7 +60,8 @@ This is a **React-based E-Commerce Cart Management System** that allows users to
 ## 🛠️ Installation & Setup
 
 1. **Clone the Repository**
-   git clone https://github.com/your-username/ecommerce-cart.git
+   git clone https://github.com/Nayem-khan1/ecommerce-cart.git
+   ```sh
    cd ecommerce-cart
    ```
 
